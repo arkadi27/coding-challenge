@@ -26,7 +26,9 @@ public class Tests {
 		  rd = new ReadData();
 		  // read the json test data file as a string
 		  // then convert it to json array
-		  try (InputStream is = new FileInputStream("testData.json")) {
+		  try {
+			  
+			  	InputStream is = new FileInputStream("testData.json");
 		        String file = IOUtils.toString(is, StandardCharsets.UTF_8);
 		        testData = new JSONArray(file);
 		        
